@@ -3,25 +3,9 @@ import { Link } from "react-router-dom"; // Import Link for navigation
 import { FaInstagram, FaLinkedin, FaGithubSquare } from "react-icons/fa";
 
 export default function DemoPage() {
-  const [isHovered, setIsHovered] = useState(false);
-  const [showOutline, setShowOutline] = useState(false);
-
-  const toggleOutline = () => {
-    setShowOutline((prev) => !prev);
-  };
-
   return (
-    <div className={`h-screen w-screen bg-black ${showOutline ? 'outline' : ''}`}>
+    <div className={`h-screen w-screen bg-black ${showOutline ? "outline" : ""}`}>
       <div className="h-full w-full bg-black flex-col relative pt-10">
-
-        <div className="absolute top-4 right-4 flex items-center">
-          <label className="switch">
-            <input type="checkbox" checked={showOutline} onChange={toggleOutline} />
-            <span className="slider round"></span>
-          </label>
-          <span className="ml-2 text-white">Toggle Outline</span>
-        </div>
-
         {/* Header */}
         <div className="h-1/12 w-full font-monument text-white text-5xl flex-col items-center">
           <div className="flex items-center justify-center h-full ">
@@ -47,11 +31,13 @@ export default function DemoPage() {
             <h2 className="text-4xl font-bold">Ryan Erickson</h2>
             <h3 className="text-xl mt-2">Technical Director</h3>
             <p className="mt-4 text-gray-400 max-w-md">
-              Computer science student at Purdue University, from Prior Lake Minnesota.
-              2nd year in Hack the Future, previously a member of YWCA Scheduling team.
+              Computer science student at Purdue University, from Prior Lake Minnesota. 2nd year in Hack the Future, previously a
+              member of YWCA Scheduling team.
             </p>
           </div>
-          <Link to="/" className="z-10 mt-6 bg-htfgreen text-white font-bold py-2 px-4 rounded transition duration-300 hover:bg-green-700">
+          <Link
+            to="/"
+            className="z-10 mt-6 bg-htfgreen text-white font-bold py-2 px-4 rounded transition duration-300 hover:bg-green-700">
             Back to Home
           </Link>
 
